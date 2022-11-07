@@ -3,6 +3,7 @@ class FactionsController < ApplicationController
 
   # GET /factions
   def index
+    p "getting request"
     @factions = Faction.all
 
     render json: @factions
