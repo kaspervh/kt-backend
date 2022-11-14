@@ -4,8 +4,13 @@ class UnitsController < ApplicationController
   # GET /units
   def index
     @units = Unit.where(faction_id: params[:faction_id])
+
     units = @units.map do |unit|
-      p unit 
+      special_rules = unit.special_rules.as_json
+      weapon_options = unit.weapon_options.as_json
+      armourys = unit.armourys.as_json
+
+      unit.as_json.merge(special_rules: special_rules, weapon_options: weapon_options, armourys: armourys)
     end
     
     render json: units
