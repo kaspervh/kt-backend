@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  weapon_skill: 1
+  balistics_skill: 1
+  strength: 1
+  toughness: 1
+  wounds: 1
+  initiative: 1
+  attacks: 1
+  leadership: 1
+  armor_save: 1
+  unit_type: MyString
+  price: 1
+
+two:
+  name: MyString
+  weapon_skill: 1
+  balistics_skill: 1
+  strength: 1
+  toughness: 1
+  wounds: 1
+  initiative: 1
+  attacks: 1
+  leadership: 1
+  armor_save: 1
+  unit_type: MyString
+  price: 1

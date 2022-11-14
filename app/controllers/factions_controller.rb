@@ -9,44 +9,46 @@ class FactionsController < ApplicationController
     render json: @factions
   end
 
-  # GET /factions/1
-  def show
-    render json: @faction
-  end
+  # OUT commented untill admin user has been set up
 
-  # POST /factions
-  def create
-    @faction = Faction.new(faction_params)
+  # # GET /factions/1
+  # def show
+  #   render json: @faction
+  # end
 
-    if @faction.save
-      render json: @faction, status: :created, location: @faction
-    else
-      render json: @faction.errors, status: :unprocessable_entity
-    end
-  end
+  # # POST /factions
+  # def create
+  #   @faction = Faction.new(faction_params)
 
-  # PATCH/PUT /factions/1
-  def update
-    if @faction.update(faction_params)
-      render json: @faction
-    else
-      render json: @faction.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @faction.save
+  #     render json: @faction, status: :created, location: @faction
+  #   else
+  #     render json: @faction.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # DELETE /factions/1
-  def destroy
-    @faction.destroy
-  end
+  # # PATCH/PUT /factions/1
+  # def update
+  #   if @faction.update(faction_params)
+  #     render json: @faction
+  #   else
+  #     render json: @faction.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_faction
-      @faction = Faction.find(params[:id])
-    end
+  # # DELETE /factions/1
+  # def destroy
+  #   @faction.destroy
+  # end
 
-    # Only allow a list of trusted parameters through.
-    def faction_params
-      params.require(:faction).permit(:name)
-    end
+  # private
+  #   # Use callbacks to share common setup or constraints between actions.
+  #   def set_faction
+  #     @faction = Faction.find(params[:id])
+  #   end
+
+  #   # Only allow a list of trusted parameters through.
+  #   def faction_params
+  #     params.require(:faction).permit(:name)
+  #   end
 end
