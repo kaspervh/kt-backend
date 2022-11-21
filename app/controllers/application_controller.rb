@@ -5,9 +5,9 @@ class ApplicationController < ActionController::API
     # making a request to a secure route, token must be included in the headers
     decode_data = decode_user_data(request.headers["token"])
     # getting user id from a nested JSON in an array.
-    user_data = decode_data[0]["user_id"] unless !decode_data
+    user_data = decode_data[0]["user_data"]
     # find a user in the database to be sure token is for a real user
-    user = User.find(user_data&.id)
+    user = User.find(user_data)
 
     # The barebone of this is to return true or false, as a middleware
     # its main purpose is to grant access or return an error to the user

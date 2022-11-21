@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rosters
   post '/login', to: 'session#login'
   post '/signup', to: 'users#create'
 
